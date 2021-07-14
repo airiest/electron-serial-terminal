@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <!--meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"-->
+  <title>Serial Terminal</title>
+  <link rel="stylesheet" type="text/css" href="./static/css/semantic.min.css">
+  <link rel="stylesheet" href="./static/css/main.css" media="screen">
+</head>
+
+<body>
+  <div class="ui container">
+
+    <div id="serial-seg" class="ui basic segment">
+      <h4 class="ui dividing header title">Serial Port</h4>
+      <div class="ui fluid input">
+        <div id="port-dropdown" class="ui fluid selection dropdown">
+          <input type="hidden">
+          <i class="dropdown icon"></i>
+          <div class="default text">Serial Port</div>
+          <div id="port-list" class="menu">
+            <div class="item disabled" data-value="no-port">no serial port</div>
+          </div>
+        </div>
+        <button id="port-open-close" class="ui button">Open</button>
+      </div>
+
+      <div id="option" class="ui accordion">
+        <div class="title">
+          <i class="icon dropdown"></i>
+          Option
+        </div>
+        <div class="content ui segment">
+          <form class="ui form">
+            <div class="fields">
+              <div class="four wide field">
+                <label>baud rate</label>
+                <div id="baudrate" class="ui small fluid selection dropdown">
+                  <input type="hidden">
+                  <i class="dropdown icon"></i>
+                  <div class="default text">baud rate</div>
+                  <div class="menu">
+                    <div class="item" data-value="9600">9600</div>
+                    <div class="item" data-value="14400">14400</div>
+                    <div class="item" data-value="19220">19220</div>
+                    <div class="item" data-value="28800">28800</div>
+                    <div class="item" data-value="38400">38400</div>
+                    <div class="item" data-value="57600">57600</div>
+                    <div class="item" data-value="115200">115200</div>
+                    <div class="item" data-value="230400">230400</div>
+                    <div class="item" data-value="460800">460800</div>
+                    <div class="item" data-value="921600">921600</div>
+                  </div>
+                </div>
+              </div>
+              <div class="four wide field">
+                <label>data bits</label>
+                <div id="databits" class="ui fluid selection dropdown">
+                  <input type="hidden">
+                  <i class="dropdown icon"></i>
+                  <div class="default text">data bits</div>
+                  <div class="menu">
+                    <div class="item" data-value="5">5</div>
+                    <div class="item" data-value="6">6</div>
+                    <div class="item" data-value="7">7</div>
+                    <div class="item" data-value="8">8</div>
+                  </div>
+                </div>
+              </div>
+              <div class="four wide field">
+                <label>parity</label>
+                <div id="parity" class="ui fluid selection dropdown">
+                  <input type="hidden">
+                  <i class="dropdown icon"></i>
+                  <div class="default text">parity</div>
+                  <div class="menu">
+                    <div class="item" data-value="none">none</div>
+                    <div class="item" data-value="even">even</div>
+                    <div class="item" data-value="mark">mark</div>
+                    <div class="item" data-value="odd">odd</div>
+                    <div class="item" data-value="space">space</div>
+                  </div>
+                </div>
+              </div>
+              <div class="four wide field">
+                <label>stop bits</label>
+                <div id="stopbits" class="ui fluid selection dropdown">
+                  <input type="hidden">
+                  <i class="dropdown icon"></i>
+                  <div class="default text">stop bits</div>
+                  <div class="menu">
+                    <div class="item" data-value="1">1</div>
+                    <div class="item" data-value="2">2</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="rtscts" class="ui checkbox">
+              <input type="checkbox">
+              <label>Hardware flow control</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="console-seg" class="ui basic segment">
+      <h4 class="ui dividing header title">Console</h4>
+      <div class="ui form">
+        <div class="field">
+          <div id="console-log"></div>
+        </div>
+      </div>
+      <div class="ui fluid action input">
+        <input id="message" type="text" placeholder="Message" autocomplete="off">
+        <button id="send-message" type="button" class="ui button">Send</button>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

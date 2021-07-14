@@ -1,0 +1,49 @@
+{
+  "name": "serial-terminal",
+  "version": "1.0.0",
+  "description": "Sertial Terminal Application",
+  "main": "main.js",
+  "scripts": {
+    "rebuild": "electron-rebuild -f -w serialport",
+    "start": "ELECTRON_DISABLE_SECURITY_WARNINGS=true electron .",
+    "build-mac": "electron-builder --mac --x64 --config no-npm-rebuild.json",
+    "build-win": "electron-builder --win --x64"
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "serialport"
+  ],
+  "author": "airiest",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^13.1.6",
+    "electron-builder": "^22.11.7",
+    "electron-rebuild": "^2.3.5"
+  },
+  "dependencies": {
+    "serialport": "^9.2.0"
+  },
+  "build": {
+    "appId": "net.airiest.serialterminal",
+    "files": [
+      "./static/**/*",
+      "package.json",
+      "package-lock.json",
+      "main.js",
+      "renderer.js",
+      "preload.js",
+      "index.html"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

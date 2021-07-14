@@ -1,0 +1,68 @@
+:root {
+    --red: #B03060;
+    --orange: #FE9A76;
+    --yellow: #FFD700;
+    --olive: #32CD32;
+    --green: #016936;
+    --teal: #008080;
+    --blue: #0E6EB8;
+    --violet: #EE82EE;
+    --purple: #B413EC;
+    --pink: #FF1493;
+    --brown: #A52A2A;
+    --grey: #A0A0A0;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray-dark: #343a40;
+
+    --text: #333333;
+    --text-gray: #aaaaaa;
+    --background: rgb(245, 245, 245);
+
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; 
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: var(--text);
+    background-color: var(--background);
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 300;
+}
+
+#port-list div,
+#baudrate div,
+#databits div,
+#parity div,
+#stopbits div {
+    font-size: 0.95em !important;
+}
+
+#port-open {
+    margin-left: 3px;
+}
+
+#option .segment {
+    margin: 0px;
+}
+
+#console-log {
+    margin-bottom: 3px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    overflow-y: scroll;
+    font-family: 'Courier New', Courier, Monaco, monospace;
+    line-height: 1.2;
+}
