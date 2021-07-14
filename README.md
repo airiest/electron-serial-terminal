@@ -27,7 +27,9 @@ $ npm run build-mac
 ```
 
 For windows.  
-After executing the build, run 'npm run rebuild' command again.  
 ```bash
 $ npm run build-win
 ```
+
+> Mac user:  
+> After executing windows build, run 'npm run rebuild' command again.  
