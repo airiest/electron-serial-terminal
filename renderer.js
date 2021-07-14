@@ -144,7 +144,7 @@ $('#port-open-close').on({
         port.open(function (err) {
             $('#port-open-close').removeClass('loading')
             if (err) {
-                $('#port-dropdown').parent().transition({ animation: 'shake', duration: 200 })
+                $('#port-dropdown').transition({ animation: 'shake', duration: 200 })
                 port = null
                 return console.log('Error on open: ', err)
             }

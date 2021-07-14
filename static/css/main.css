@@ -32,7 +32,6 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    color: var(--text);
     background-color: var(--background);
 }
 
@@ -40,28 +39,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: 300;
 }
 
-#port-list div,
-#baudrate div,
-#databits div,
-#parity div,
-#stopbits div {
-    font-size: 0.95em !important;
-}
-
-#port-open {
-    margin-left: 3px;
-}
-
-#option .segment {
-    margin: 0px;
-}
-
-#console-log {
+.frame {
     margin-bottom: 3px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: white;
+    background-color: var(--white);;
+}
+
+#console-log {
     overflow-y: scroll;
     font-family: 'Courier New', Courier, Monaco, monospace;
     line-height: 1.2;
