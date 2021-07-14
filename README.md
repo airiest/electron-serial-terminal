@@ -1,10 +1,10 @@
 # electron-serial-terminal
 
-A Serial Terminal application using Electron.
+A serial terminal application using Electron.
 
 ![screenshot](./screenshot.png)
 
-## Install
+## Setup
 
 ```bash
 # install npm package
@@ -13,14 +13,13 @@ $ npm install
 $ npm run rebuild
 ```
 
-## To Use
+## Run Application for debugging
 
-For debug.  
 ```bash
 $ npm start
 ```
 
-## To Build production (electron-builder)
+## Build Production (electron-builder)
 
 For mac.  
 ```bash
